@@ -47,11 +47,11 @@
 }`\
 
 \*Methods\
-<code>def method_name
+`def method_name
     puts "hello"
 end
 
-method_name</code> defining and calling\
+method_name` defining and calling\
 `def method_name(name)
     puts ("hello "+name)
 end
