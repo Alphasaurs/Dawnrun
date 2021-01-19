@@ -28,8 +28,8 @@
 `puts Math.sqrt(number)`\
 
 \*input\
-`variable_name = gets`\ store input
-`variable_name = gets.chomp()` remove enter after input
+`variable_name = gets` store input\
+`variable_name = gets.chomp()` remove enter after input\
 
 \*Array\
 ->you can input different data type in array
@@ -40,174 +40,274 @@
 
 \*Hashes\
 `variable_name = { "key1" => "value1", "key2" => "value2", "key3" =>"value3" }`\
-`variable_name = {
+
+```console
+   variable_name = {
     :key1 => "value1",
     "key2" =>   "value2",
-    "key3" =>"value3"
-}`\
+    "key3" =>"value3"}
+```
 
 \*Methods\
-`def method_name
+
+1. defining and calling
+
+```console
+def method_name
     puts "hello"
 end
+method_name
+```
 
-method_name` defining and calling\
-`def method_name(name)
+2. parameter
+
+```console
+  def method_name(name)
+    puts ("hello "+name)
+ end
+
+ method_name("cool")
+```
+
+3. default value in function
+
+```console
+def method_name(name="others")
     puts ("hello "+name)
 end
 
-method_name("cool")` parameter \
+method_name
+```
 
-`def method_name(name="others")
-    puts ("hello "+name)
-end
+4. return function
 
-method_name` default value in function\
-
-`def method_name(num)
+```console
+def method_name(num)
    return num*num*num
 end
 
-puts method_name(2)` return function\
+puts method_name(2)
+```
 
-`def method_name(num)
+5. output 8 24
+
+```console
+def method_name(num)
    return num*num*num,24
 end
 
-puts method_name(2)` output 8 24\
+puts method_name(2)
+```
 
-`def method_name(num)
+6. output 24
+
+```console
+def method_name(num)
    return num*num*num,24
 end
 
-puts method_name(2)[1]` output 24\
-
-
+puts method_name(2)[1]
+```
 
 \*If\
-`iscar=true
+
+```console
+iscar=true
 if iscar
     puts "car"
 else
     puts"not car"
-end`\
+end
+```
 
-`
+you can also use or
+
+```console
 iscar=true
 istop=false
 if iscar and istop
     puts "car"
 else
     puts"not car"
-end` you can also use `or`\
+end
+```
 
 `elsif statement`\
 
 \*case expression\
-` case day
+
+```console
+case day
  when "Mon"
     day_name="Monday"
  when "Tue"
     day_name="Tuesday"
  else
     day_name="invalid"
- end`\
+ end
+```
 
 \*while loop\
-`while i<=5
+
+```console
+while i<=5
     puts i
     i+=1
-end`\
+end
+```
 
 \*for loop\
-`langs=["java","js","nodejs"]
+
+```console
+langs=["java","js","nodejs"]
 for lang in langs
     puts lang
-end`\
+end
+```
 
-`langs=["java","js","nodejs"]
+```console
+langs=["java","js","nodejs"]
 langs.each do |lang|
     puts lang
-end`\
+end
+```
 
-`for i in 0..5
+print 0,1,2,3,4,5
+
+```console
+for i in 0..5
     puts i
-end` print 0,1,2,3,4,5\
+end
+```
 
-`6.times do |index|
+``
+
+print 0,1,2,3,4,5
+
+```console
+6.times do |index|
     puts index
-end` print 0,1,2,3,4,5\
+end
+```
 
-`def pow(b,p)
+output 8\
+
+```console
+def pow(b,p)
    r=1
    p.times do
-   r=r*b   
+   r=r*b
    end
 return r
 end
-puts pow(2,3)` output 8\
+puts pow(2,3)
+```
 
 \*file reading \
-`File.open("cool.txt","r") do |a|
-   puts a.read()
-end` opening a file\
 
-`File.open("cool.txt","r") do |a|
+opening a file\
+
+```console
+File.open("cool.txt","r") do |a|
+   puts a.read()
+end
+```
+
+reads line by line one each time from file\
+
+```console
+File.open("cool.txt","r") do |a|
    puts a.readline()
-end` reads  line by line one each time from file\
+end
+```
 
 ` puts a.readlines()` returns an array of all line in the file\
-`file1=File.open("cool.txt","r") 
+
+always close file\
+
+```console
+file1=File.open("cool.txt","r")
 puts file1.readlines()
-file1.close()`always close file\
+file1.close()
+```
 
 \*writing file\
-`File.open("cool.txt","a") do |a|
+
+1. append/write to the end of file
+
+```console
+File.open("cool.txt","a") do |a|
    a.write("cool,tel")
-end`append/write to the end of file\
+end
+```
 
-`File.open("cool.txt","w") do |a|
+1. overwrite the full file
+
+```console
+File.open("cool.txt","w") do |a|
    a.write("cool,tel")
-end`overwrite the full file \
-
-
+end
+```
 
 \*exception \
-`begin
+
+1. first syntax
+
+```console
+begin
    num=10/0
-rescue 
-   puts "zerdivisionerror" 
-end`first syntax\
-`begin
+rescue
+   puts "zerdivisionerror"
+end
+```
+
+1. specifying error in rescue
+
+```console
+begin
   array["0"]
 rescue TypeError
-   puts "TypeError" 
+   puts "TypeError"
 rescue ZeroDivisionError
   puts "ZeroDivisionError"
-end` specifying error in rescue\
+end
+```
 
-`begin
+3. third way
+
+```console
+begin
    array["a"]
 rescue TypeError => exception
    puts exception
-end` third way\
-
-
+end
+```
 
 \*classes and objects \
-`class Car
+
+1. making class i.e blueprint of object
+
+```console
+class Car
 attr_accessor :name, :model, :price
 end
-`making class i.e blueprint of object\
-`car1=Car.new()
+```
+
+2. making object i.e istance of class
+
+```console
+car1=Car.new()
 car1.name="tesla"
 car1.model="X"
-` making object i.e istance of class\
+```
 
+`
 
 \*initialize methods\
 these are the methods which will called automaticaaly when we make objects\
-`class Car
+
+```console
+class Car
 attr_accessor :name, :model, :price
  def initialize(name,model,price)
  @name=name
@@ -215,10 +315,14 @@ attr_accessor :name, :model, :price
  @price=price
  end
 end
-car1=Car.new("tesla","x",22)` \
+car1=Car.new("tesla","x",22)
+```
 
 \*object methods\
-`
+
+has_price is a object method\
+
+```console
 class Car
 attr_accessor :name, :model, :price
  def initialize(name,model,price)
@@ -237,12 +341,13 @@ end
 
 car1=Car.new("tesla","x",2200)
 
-puts car1.has_price` has_price is a object method\
-
+puts car1.has_price
+```
 
 \*inheritance <\
 
-`class Car
+```console
+class Car
     def run_diesel
        puts "we run diesel"
     end
@@ -258,14 +363,15 @@ car1=Car.new()
 car1.run_petrol
 
 car2=SpecialCar.new()
-car2.run_diesel` \
-
-
+car2.run_diesel
+```
 
 \*Modules\
 to organize methods in a sperate container\
+same file\
 
-`module Car
+```console
+module Car
    def model(name)
       puts "model #{name}"
    end
@@ -276,6 +382,6 @@ end
 
 include Car
 Car.model("electric")
-`same file\
+```
 
 `require_relative "hello.rb"` just use require in another\
