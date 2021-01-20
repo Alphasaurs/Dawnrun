@@ -13,6 +13,7 @@
 `puts variable_name.downcase()`\
 `puts variable_name.strip()` to remove all whitespaces\
 `puts variable_name.length()`\
+
 `puts variable_name.include? "checking_word" ` to see checking_word is present in variable_name\
 `puts variable_name[4,8]` print value fromt 4 to 8\
 `puts variable_name.index("A")` find index of "A" in variable_name\
