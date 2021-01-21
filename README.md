@@ -48,6 +48,7 @@
     "key2" =>   "value2",
     "key3" =>"value3"}
 ```
+`puts["key2"]`
 
 \*Methods\
 
